@@ -27,7 +27,27 @@
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+      $('#grade-it').on('click', function(){
+        var answer1 = $('#question-1 .form-control').val();
+        console.log(answer1);
+
+        if(answer1 == 'Mark Conditt' || answer1 == 'Conditt'){
+          $('#question-1').addClass('has-success');
+        } else{
+          $('#question-1').addClass('has-error');
+        }
+
+        var answer2 = $('#question-2 .form-control').val();
+        console.log(answer2);
+
+        if(answer2 == 'answer-2'){
+          $('#question-2').addClass('has-success');
+        } else if (answer2 == 'answer-1'){
+          $('#question-2').addClass('has-error');
+        }
+      });
     </script>
   </body>
 </html>
