@@ -34,6 +34,10 @@
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
+
+      <div class="form-group">
+        <input id="show-answers" type="button" value="Show me the answers" class="btn btn-primary" />
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -67,6 +71,12 @@
         } else{
         $('#question-3').addClass('has-error');
         }
+      });
+
+      $('#show-answers').on('click', function(){
+        $('#question-1 .form-control').val('Mark Conditt');
+        $('#question-2 .form-control').val('answer-2');
+        $('#question-3 .form-control').val('answer-2');
       });
     </script>
   </body>
