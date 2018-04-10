@@ -39,6 +39,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
       $('#grade-it').on('click', function(){
+        $('.form-control').removeClass('has-success');
+        $('.form-control').removeClass('has-error');
+
         var answer1 = $('#question-1 .form-control').val();
 
         if(answer1 == 'Mark Conditt' || answer1 == 'Conditt'){
